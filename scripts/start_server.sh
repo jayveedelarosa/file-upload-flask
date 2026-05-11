@@ -24,6 +24,6 @@ mkdir -p /home/ec2-user/efs/uploads
 # nohup: keeps Flask running after this script's shell closes
 # The & runs it in the background so the script can finish
 # >> flask.log appends all output to a log file for debugging
-nohup flask --app main run --host 0.0.0.0 >> /home/ec2-user/flask.log 2>&1 &
+nohup /home/ec2-user/venv/bin/flask --app main run --host 0.0.0.0 >> /home/ec2-user/flask.log 2>&1 &
 
 echo "Flask started with PID $!"
